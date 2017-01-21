@@ -1,8 +1,19 @@
 {
   "name": "react-router-partial-app-loading",
   "version": "1.0.0",
-  "description": "Partial app loading using react-router and webpack 2 Edit",
-  "main": "index.js",
+  "description": "Partial App loading using react-router and webpack 2",
+  "keywords": [
+    "webpack 2",
+    "react",
+    "router",
+    "react-router",
+    "dynamic loading",
+    "partial loading"
+  ],
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": "git@github.com:notgiorgi/react-router-partial-app-loading.git",
   "author": "Giorgi Bagdavadze <notgiorgi@gmail.com>",
   "license": "MIT",
