@@ -1,8 +1,9 @@
 module.exports = {
   path: 'profile',
   getComponent(nextState, cb) {
-    require.ensure([], (require) => {
-      cb(null, require('./components/Profile'))
-    })
+    System
+    .import('./components/Profile')
+    .then(component => cb(null, component))
+    .catch(err => cb(err))
   }
 }

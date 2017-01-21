@@ -1,8 +1,9 @@
 module.exports = {
   path: 'grades',
   getComponent(nextState, cb) {
-    require.ensure([], (require) => {
-      cb(null, require('./components/Grades'))
-    })
+    System
+    .import('./components/Grades')
+    .then(component => cb(null, component))
+    .catch(err => cb(err))
   }
 }

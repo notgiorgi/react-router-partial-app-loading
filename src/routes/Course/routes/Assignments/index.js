@@ -2,19 +2,22 @@ module.exports = {
   path: 'assignments',
 
   getChildRoutes(partialNextState, cb) {
-    require.ensure([], (require) => {
-      cb(null, [
-        require('./routes/Assignment')
-      ])
-    })
+    System
+    .import('./routes/Assignment')
+    .then(component => cb(null, component))
+    .catch(err => cb(err))
   },
 
   getComponents(nextState, cb) {
-    require.ensure([], (require) => {
-      cb(null, {
-        sidebar: require('./components/Sidebar'),
-        main: require('./components/Assignments')
-      })
-    })
+    Promise
+    .all([
+      System.import('./components/Sidebar'),
+      System.import('./components/Assignments')
+    ])
+    .then(components => cb(null, {
+      sidebar: components[0],
+      main: components[1]
+    }))
+    .catch(err => cb(err))
   }
 }

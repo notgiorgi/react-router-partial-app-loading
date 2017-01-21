@@ -2,26 +2,32 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, browserHistory } from 'react-router'
 
-import withExampleBasename from '../withExampleBasename'
 import './stubs/COURSES'
+
+import App from './components/App'
+import Calendar from './routes/Calendar'
+import Course from './routes/Course'
+import Grades from './routes/Grades'
+import Messages from './routes/Messages'
+import Profile from './routes/Profile'
 
 const rootRoute = {
   childRoutes: [ {
     path: '/',
-    component: require('./components/App'),
+    component: App,
     childRoutes: [
-      require('./routes/Calendar'),
-      require('./routes/Course'),
-      require('./routes/Grades'),
-      require('./routes/Messages'),
-      require('./routes/Profile')
+      Calendar,
+      Course,
+      Grades,
+      Messages,
+      Profile
     ]
   } ]
 }
 
 render((
   <Router
-    history={withExampleBasename(browserHistory, __dirname)}
+    history={browserHistory}
     routes={rootRoute}
   />
 ), document.getElementById('example'))

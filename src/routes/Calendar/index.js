@@ -1,8 +1,9 @@
 module.exports = {
   path: 'calendar',
   getComponent(nextState, cb) {
-    require.ensure([], (require) => {
-      cb(null, require('./components/Calendar'))
-    })
+    System
+    .import('./components/Calendar')
+    .then(component => cb(null, component))
+    .catch(err => cb(err))
   }
 }

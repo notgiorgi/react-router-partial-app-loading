@@ -1,8 +1,9 @@
 module.exports = {
   path: 'messages',
   getComponent(nextState, cb) {
-    require.ensure([], (require) => {
-      cb(null, require('./components/Messages'))
-    })
+    System
+    .import('./components/Messages')
+    .then(component => cb(null, component))
+    .catch(err => cb(err))
   }
 }
