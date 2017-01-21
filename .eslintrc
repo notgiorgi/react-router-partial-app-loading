@@ -1,0 +1,14 @@
+{
+  "extends": ["rackt", "plugin:react/recommended"],
+  "globals": {
+    "__DEV__": false
+  },
+  "rules": {
+    "react/display-name": 0,
+    "react/jsx-wrap-multilines": 2,
+    "react/prop-types": 0
+  },
+  "plugins": [
+    "react"
+  ]
+}
