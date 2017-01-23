@@ -1,9 +1,8 @@
-module.exports = {
+export default {
   path: ':assignmentId',
   getComponent(nextState, cb) {
-    System
-    .import('./components/Assignment')
-    .then(component => cb(null, component))
-    .catch(err => cb(err))
+    import('./components/Assignment')
+      .then(({ default: component }) => cb(null, component))
+      .catch(err => cb(err))
   }
 }

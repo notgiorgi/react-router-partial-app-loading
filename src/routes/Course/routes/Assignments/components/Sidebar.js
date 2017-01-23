@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-class Sidebar extends Component {
+export default class Sidebar extends Component {
   render() {
     let { assignments } = COURSES[this.props.params.courseId]
 
@@ -22,5 +22,3 @@ class Sidebar extends Component {
     )
   }
 }
-
-module.exports = Sidebar

@@ -1,22 +1,21 @@
-module.exports = {
+export default {
   path: 'announcements',
 
   getChildRoutes(partialNextState, cb) {
-    System
-    .import('./routes/Announcement')
-    .then(component => cb(null, component))
-    .catch(err => cb(err))
+    import('./routes/Announcement')
+      .then(({ default: component }) => cb(null, component))
+      .catch(err => cb(err))
   },
 
   getComponents(nextState, cb) {
     Promise
     .all([
-      System.import('./components/Sidebar'),
-      System.import('./components/Announcements')
+      import('./components/Sidebar'),
+      import('./components/Announcements')
     ])
     .then(components => cb(null, {
-      sidebar: components[0],
-      main: components[1]
+      sidebar: components[0].default,
+      main: components[1].default
     }))
     .catch(err => cb(err))
   }

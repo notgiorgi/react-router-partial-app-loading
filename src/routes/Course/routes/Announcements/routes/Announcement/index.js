@@ -1,9 +1,9 @@
-module.exports = {
+export default {
   path: ':announcementId',
 
   getComponent(nextState, cb) {
-    System.import('./components/Announcement')
-    .then(component => cb(null, component))
-    .catch(err => cb(err))
+    import('./components/Announcement')
+      .then(({ default: component }) => cb(null, component))
+      .catch(err => cb(err))
   }
 }
