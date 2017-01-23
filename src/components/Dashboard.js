@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-class Dashboard extends Component {
+export default class Dashboard extends Component {
   render() {
     const { courses } = this.props
 
@@ -27,5 +27,3 @@ class Dashboard extends Component {
     )
   }
 }
-
-export default Dashboard

@@ -1,9 +1,8 @@
-module.exports = {
+export default {
   path: 'profile',
   getComponent(nextState, cb) {
-    System
-    .import('./components/Profile')
-    .then(component => cb(null, component))
-    .catch(err => cb(err))
+    import('./components/Profile')
+      .then(({ default: component }) => cb(null, component))
+      .catch(err => cb(err))
   }
 }

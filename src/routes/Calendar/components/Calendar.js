@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Calendar extends Component {
+export default class Calendar extends Component {
   render() {
     const events = [
       { id: 0, title: 'essay due' }
@@ -18,5 +18,3 @@ class Calendar extends Component {
     )
   }
 }
-
-module.exports = Calendar

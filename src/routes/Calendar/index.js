@@ -1,9 +1,8 @@
-module.exports = {
+export default {
   path: 'calendar',
-  getComponent(nextState, cb) {
-    System
-    .import('./components/Calendar')
-    .then(component => cb(null, component))
-    .catch(err => cb(err))
+  getComponent(nextState, cb) {    
+    import('./components/Calendar')
+      .then(({ default: component }) => cb(null, component))
+      .catch(err => cb(err))
   }
 }

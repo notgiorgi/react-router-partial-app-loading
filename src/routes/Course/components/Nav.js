@@ -18,7 +18,7 @@ styles.activeLink = {
   color: 'red'
 }
 
-class Nav extends Component {
+export default class Nav extends Component {
   render() {
     const { course } = this.props
     const pages = [
@@ -41,5 +41,3 @@ class Nav extends Component {
     )
   }
 }
-
-export default Nav

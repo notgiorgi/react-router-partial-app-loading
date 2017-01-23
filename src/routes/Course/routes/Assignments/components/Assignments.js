@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Assignments extends Component {
+export default class Assignments extends Component {
   render() {
     return (
       <div>
@@ -10,5 +10,3 @@ class Assignments extends Component {
     )
   }
 }
-
-module.exports = Assignments

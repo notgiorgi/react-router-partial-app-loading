@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Announcements extends Component {
+export default class Announcements extends Component {
   render() {
     return (
       <div>
@@ -10,5 +10,3 @@ class Announcements extends Component {
     )
   }
 }
-
-module.exports = Announcements

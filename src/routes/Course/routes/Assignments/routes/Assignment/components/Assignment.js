@@ -1,7 +1,7 @@
 /*globals COURSES:true */
 import React, { Component } from 'react'
 
-class Assignment extends Component {
+export default class Assignment extends Component {
   render() {
     let { courseId, assignmentId } = this.props.params
     let { title, body } = COURSES[courseId].assignments[assignmentId]
@@ -14,5 +14,3 @@ class Assignment extends Component {
     )
   }
 }
-
-module.exports = Assignment

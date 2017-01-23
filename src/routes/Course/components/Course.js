@@ -13,7 +13,7 @@ styles.sidebar = {
   marginRight: 20
 }
 
-class Course extends Component {
+export default class Course extends Component {
   render() {
     let { sidebar, main, children, params } = this.props
     let course = COURSES[params.courseId]
@@ -45,5 +45,3 @@ class Course extends Component {
     )
   }
 }
-
-module.exports = Course

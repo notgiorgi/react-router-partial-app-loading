@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Grades extends React.Component {
+export default class Grades extends React.Component {
 
   render() {
     return (
@@ -11,5 +11,3 @@ class Grades extends React.Component {
   }
 
 }
-
-module.exports = Grades
