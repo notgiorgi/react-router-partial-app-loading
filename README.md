@@ -6,7 +6,7 @@ but uses Webpack 2 and [import](https://webpack.js.org/guides/code-splitting-imp
 
 # Usage
 ```bash
-$ git clone https://github.com/notgiorgi/react-router.git
+$ git clone https://github.com/notgiorgi/react-router-partial-app-loading.git
 $ npm install
 $ npm start
 ```
